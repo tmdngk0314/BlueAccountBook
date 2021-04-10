@@ -127,7 +127,8 @@
         android:rowCount="1">
 
 
-    </GridLayout>
+
+    </GridLayout> <!-- 주석쓰는법 -->
 
 
 

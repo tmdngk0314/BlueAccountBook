@@ -447,7 +447,7 @@
         android:orientation="horizontal"
         android:paddingTop="5dp">
         <ImageButton
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="#B9E4F8"
             android:src="@drawable/calendar"
@@ -455,33 +455,33 @@
             android:layout_weight="1"
             />
         <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:background="#B9E4F8"
-            android:src="@drawable/right_icon"
+            android:src="@drawable/list"
             android:scaleType="fitCenter"
             android:layout_weight="1"
             />
         <ImageButton
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="#B9E4F8"
-            android:src="@drawable/right_icon"
+            android:src="@drawable/memo"
             android:scaleType="fitCenter"
             android:layout_weight="1"
             />
         <ImageButton
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="#B9E4F8"
-            android:src="@drawable/right_icon"
+            android:src="@drawable/success"
             android:scaleType="fitCenter"
             android:layout_weight="1"/>
         <ImageButton
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="#B9E4F8"
-            android:src="@drawable/right_icon"
+            android:src="@drawable/information"
             android:scaleType="fitCenter"
             android:layout_weight="1"
             />

@@ -327,7 +327,8 @@
         android:id="@+id/biglinear2"
         android:layout_below="@+id/biglinear1"
         android:orientation="vertical"
-        android:layout_centerInParent="true">
+        android:layout_centerInParent="true"
+        android:layout_margin="5dp">
         <GridLayout
             android:layout_width="332dp"
             android:layout_height="160dp"
@@ -429,8 +430,13 @@
                 android:layout_gravity="center_vertical"
                 android:gravity="center"
                 android:textAlignment="center"/>
-
         </GridLayout>
-
     </LinearLayout>
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/biglinear2"
+        android:rowCount="1"
+        android:columnCount="5"/>
+
 </RelativeLayout>

@@ -92,7 +92,7 @@
                         android:layout_height="wrap_content"
                         android:text="0 원    "
                         android:layout_gravity="center_vertical"
-                        android:textColor="#000000"
+                        android:textColor="#ff0000"
                         android:layout_weight="3"
                         android:textAlignment="textEnd"
                         tools:ignore="RtlCompat" />
@@ -112,7 +112,7 @@
                         android:layout_height="wrap_content"
                         android:text="0 원    "
                         android:layout_gravity="center_vertical"
-                        android:textColor="#000000"
+                        android:textColor="#0000ff"
                         android:layout_weight="3"
                         android:textAlignment="textEnd"
                         tools:ignore="RtlCompat" />
@@ -132,7 +132,7 @@
                         android:layout_height="wrap_content"
                         android:text="0 원    "
                         android:layout_gravity="center_vertical"
-                        android:textColor="#000000"
+                        android:textColor="#00ff00"
                         android:layout_weight="3"
                         android:textAlignment="textEnd"
                         tools:ignore="RtlCompat" />
@@ -240,7 +240,7 @@
                         android:layout_height="wrap_content"
                         android:text="0 원    "
                         android:layout_gravity="center_vertical"
-                        android:textColor="#000000"
+                        android:textColor="#ff0000"
                         android:layout_weight="3"
                         android:textAlignment="textEnd"
                         tools:ignore="RtlCompat" />
@@ -260,7 +260,7 @@
                         android:layout_height="wrap_content"
                         android:text="0 원    "
                         android:layout_gravity="center_vertical"
-                        android:textColor="#000000"
+                        android:textColor="#0000ff"
                         android:layout_weight="3"
                         android:textAlignment="textEnd"
                         tools:ignore="RtlCompat" />
@@ -280,7 +280,7 @@
                         android:layout_height="wrap_content"
                         android:text="0 원    "
                         android:layout_gravity="center_vertical"
-                        android:textColor="#000000"
+                        android:textColor="#00ff00"
                         android:layout_weight="3"
                         android:textAlignment="textEnd"
                         tools:ignore="RtlCompat" />

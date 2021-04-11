@@ -23,12 +23,12 @@
                 android:src="@drawable/left_icon"
                 android:background="#ffffff"
                 android:layout_width="30dp"
-                android:layout_height="180dp"
+                android:layout_height="182dp"
                 android:scaleType="fitCenter"
                 android:layout_margin="2.5dp"/>
             <LinearLayout
                 android:layout_width="270dp"
-                android:layout_height="180dp"
+                android:layout_height="182dp"
                 android:orientation="vertical"
                 android:layout_column="1"
                 android:layout_row="0"
@@ -39,44 +39,122 @@
                     android:layout_width="match_parent"
                     android:layout_height="36dp"
                     >
-                    <GridLayout
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="36dp"
-                        android:rowCount="1"
-                        android:columnCount="6">
+                        android:orientation="horizontal"
+                        android:padding="5dp">
                         <Button
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:layout_weight="1"
                             android:text="월별"
                             android:textColor="#ff0000"
-                            android:layout_row="0"
-                            android:layout_column="0"
-                            android:background="#ffffff"/>
+                            android:background="#ffffff"
+                            />
                         <Button
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:layout_weight="1"
                             android:text="2021.04"
                             android:textColor="#000000"
-                            android:layout_row="0"
-                            android:layout_column="1"
-                            android:layout_columnSpan="4"
-                            android:background="#ffffff"/>
+                            android:background="#ffffff"
+                            />
                         <Button
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:layout_weight="1"
                             android:text="이달"
                             android:textColor="#000000"
-                            android:layout_row="0"
-                            android:layout_column="5"
-                            android:background="#ffffff"/>
-                    </GridLayout>
+                            android:background="#ffffff" />
+                    </LinearLayout>
                 </LinearLayout>
+                <View
+                    android:layout_width="264dp"
+                    android:layout_height="2dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="#465FED"
+                    />
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="144dp"
-                    >
-
+                    android:layout_height="36dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="    이달의 지출"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="#000000"
+                        android:layout_weight="1" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0 원    "
+                        android:layout_gravity="center_vertical"
+                        android:textColor="#000000"
+                        android:layout_weight="3"
+                        android:textAlignment="textEnd"
+                        tools:ignore="RtlCompat" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="    이달의 수입"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="#000000"
+                        android:layout_weight="1" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0 원    "
+                        android:layout_gravity="center_vertical"
+                        android:textColor="#000000"
+                        android:layout_weight="3"
+                        android:textAlignment="textEnd"
+                        tools:ignore="RtlCompat" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="    이달의 저축"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="#000000"
+                        android:layout_weight="1" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0 원    "
+                        android:layout_gravity="center_vertical"
+                        android:textColor="#000000"
+                        android:layout_weight="3"
+                        android:textAlignment="textEnd"
+                        tools:ignore="RtlCompat" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="    이달의 잔액"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="#000000"
+                        android:layout_weight="1" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0 원    "
+                        android:layout_gravity="center_vertical"
+                        android:textColor="#000000"
+                        android:layout_weight="3"
+                        android:textAlignment="textEnd"
+                        tools:ignore="RtlCompat" />
                 </LinearLayout>
             </LinearLayout>
             <ImageButton
@@ -85,7 +163,7 @@
                 android:src="@drawable/right_icon"
                 android:background="#ffffff"
                 android:layout_width="30dp"
-                android:layout_height="180dp"
+                android:layout_height="182dp"
                 android:scaleType="fitCenter"
                 android:layout_margin="2.5dp"/>
             <ImageButton
@@ -94,17 +172,138 @@
                 android:src="@drawable/left_icon"
                 android:background="#ffffff"
                 android:layout_width="30dp"
-                android:layout_height="180dp"
+                android:layout_height="182dp"
                 android:scaleType="fitCenter"
                 android:layout_margin="2.5dp"/>
             <LinearLayout
                 android:layout_width="270dp"
-                android:layout_height="180dp"
+                android:layout_height="182dp"
                 android:orientation="vertical"
                 android:layout_column="1"
                 android:layout_row="1"
                 android:background="@drawable/border_layout"
                 android:layout_margin="2.5dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="36dp"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="일별"
+                            android:textColor="#ff0000"
+                            android:background="#ffffff"
+                            />
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="2021.05.12"
+                            android:textColor="#000000"
+                            android:background="#ffffff"
+                            />
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="오늘"
+                            android:textColor="#000000"
+                            android:background="#ffffff" />
+                    </LinearLayout>
+                </LinearLayout>
+                <View
+                    android:layout_width="264dp"
+                    android:layout_height="2dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="#465FED"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="    오늘의 지출"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="#000000"
+                        android:layout_weight="1" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0 원    "
+                        android:layout_gravity="center_vertical"
+                        android:textColor="#000000"
+                        android:layout_weight="3"
+                        android:textAlignment="textEnd"
+                        tools:ignore="RtlCompat" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="    오늘의 수입"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="#000000"
+                        android:layout_weight="1" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0 원    "
+                        android:layout_gravity="center_vertical"
+                        android:textColor="#000000"
+                        android:layout_weight="3"
+                        android:textAlignment="textEnd"
+                        tools:ignore="RtlCompat" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="    오늘의 저축"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="#000000"
+                        android:layout_weight="1" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0 원    "
+                        android:layout_gravity="center_vertical"
+                        android:textColor="#000000"
+                        android:layout_weight="3"
+                        android:textAlignment="textEnd"
+                        tools:ignore="RtlCompat" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="    오늘의 잔액"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="#000000"
+                        android:layout_weight="1" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0 원    "
+                        android:layout_gravity="center_vertical"
+                        android:textColor="#000000"
+                        android:layout_weight="3"
+                        android:textAlignment="textEnd"
+                        tools:ignore="RtlCompat" />
+                </LinearLayout>
 
             </LinearLayout>
             <ImageButton
@@ -113,7 +312,7 @@
                 android:src="@drawable/right_icon"
                 android:background="#ffffff"
                 android:layout_width="30dp"
-                android:layout_height="180dp"
+                android:layout_height="182dp"
                 android:scaleType="fitCenter"
                 android:layout_margin="2.5dp"/>
 
@@ -129,10 +328,5 @@
         android:columnCount="5"
         android:rowCount="1">
 
-
-
     </GridLayout>
-
-
-
 </RelativeLayout>

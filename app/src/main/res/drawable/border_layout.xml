@@ -7,7 +7,7 @@
           android:bottom="2dp">
           <shape android:shape="rectangle">
               <stroke android:width="2dp"
-                  android:color="#465FED"/>
+                  android:color="#BABABC"/>
               <solid android:color="#ffffff"/>
               <corners
                   android:topLeftRadius="2dp"

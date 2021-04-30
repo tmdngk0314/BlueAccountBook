@@ -1,19 +1,17 @@
 package com.cookandroid.account_book;
 
-import android.app.Activity;
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.ImageButton;
 
-public class Information extends Activity {
+public class Success extends AppCompatActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.information);
+        setContentView(R.layout.activity_success);
 
-        Intent inIntent4 = getIntent();
-
-
-
+        Intent inIntent5 = getIntent();
     }
 }

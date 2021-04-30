@@ -20,13 +20,22 @@ public class MainActivity extends AppCompatActivity {
         ImageButton successbutton = (ImageButton)findViewById(R.id.successbutton);
         ImageButton informationbutton = (ImageButton)findViewById(R.id.informationbutton);
 
+        successbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent4 = new Intent(getApplicationContext(), Success.class);
+                startActivity(intent4);
+            }
+        });
+
         informationbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), Information.class);
-                startActivity(intent);
+                Intent intent5 = new Intent(getApplicationContext(), Information.class);
+                startActivity(intent5);
             }
         });
+
 
 
     }

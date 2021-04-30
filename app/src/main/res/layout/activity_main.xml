@@ -453,6 +453,7 @@
             android:src="@drawable/calendar"
             android:scaleType="fitCenter"
             android:layout_weight="1"
+            android:id="@+id/calcbutton"
             />
         <ImageButton
             android:layout_width="match_parent"
@@ -461,6 +462,7 @@
             android:src="@drawable/list"
             android:scaleType="fitCenter"
             android:layout_weight="1"
+            android:id="@+id/listbutton"
             />
         <ImageButton
             android:layout_width="match_parent"
@@ -469,6 +471,7 @@
             android:src="@drawable/memo"
             android:scaleType="fitCenter"
             android:layout_weight="1"
+            android:id="@+id/memobutton"
             />
         <ImageButton
             android:layout_width="match_parent"
@@ -476,7 +479,8 @@
             android:background="#B9E4F8"
             android:src="@drawable/success"
             android:scaleType="fitCenter"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:id="@+id/successbutton"/>
         <ImageButton
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -484,6 +488,7 @@
             android:src="@drawable/information"
             android:scaleType="fitCenter"
             android:layout_weight="1"
+            android:id="@+id/informationbutton"
             />
     </LinearLayout>
 

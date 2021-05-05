@@ -20,6 +20,14 @@ public class MainActivity extends AppCompatActivity {
         ImageButton successbutton = (ImageButton)findViewById(R.id.successbutton);
         ImageButton informationbutton = (ImageButton)findViewById(R.id.informationbutton);
 
+        calcbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent1 = new Intent(getApplicationContext(), CalendarActivity.class);
+                startActivity(intent1);
+            }
+        });
+
         successbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -35,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent5);
             }
         });
+
 
 
 

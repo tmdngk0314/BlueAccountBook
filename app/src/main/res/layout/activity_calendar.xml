@@ -33,7 +33,7 @@
         android:ems="10"
         android:id="@+id/contextEditText"
         app:layout_constraintTop_toBottomOf="@+id/diaryTextView" android:layout_marginTop="16dp"
-        android:hint="내용을 입력하세요." android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent"
+        android:hint="지출,수입,저축 내역을 적으세요." android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginRight="8dp" android:layout_marginStart="8dp"
         app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
         android:visibility="invisible"/>

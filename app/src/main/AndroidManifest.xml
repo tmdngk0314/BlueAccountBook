@@ -9,11 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Account_book">
-        <activity android:name=".CalendarActivity"></activity>
+        <activity android:name=".CalculatorActivity"></activity>
+        <activity android:name=".CalendarActivity" />
         <activity android:name=".Success" />
-        <activity
-            android:name=".Splashscreen"
-            >
+        <activity android:name=".Splashscreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

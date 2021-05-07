@@ -19,18 +19,19 @@
         android:layout_margin="10dp"
         android:layout_width="300dp"
         android:layout_height="80dp"
-        android:background="@drawable/bold2_layout"
+        android:background="#A2CCFF"
         android:layout_gravity="center"
         android:orientation="horizontal"
         android:padding="5dp">
-        <EditText
+        <Button
             android:layout_width="200dp"
             android:layout_height="60dp"
             android:hint="0"
             android:textSize="36dp"
             android:layout_gravity="center"
             android:layout_marginLeft="20dp"
-
+            android:background="@drawable/bold2_layout"
+            android:id="@+id/suc_btn1"
             />
         <TextView
             android:layout_width="wrap_content"
@@ -75,8 +76,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="#ff0000"
-                    android:text="100"
-                    android:textSize="36dp" />
+                    android:text="0"
+                    android:textSize="36dp"
+                    android:id="@+id/suc_tv1"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -102,7 +104,8 @@
             android:layout_height="242dp"
             android:layout_gravity="center"
             android:background="@drawable/green"
-            android:visibility="invisible"
+            android:visibility="visible"
+            android:id="@+id/img_green"
           />
         <ImageView
             android:layout_width="308dp"
@@ -110,6 +113,7 @@
             android:layout_gravity="center"
             android:background="@drawable/yellow"
             android:visibility="invisible"
+            android:id="@+id/img_yellow"
             />
         <ImageView
             android:layout_width="308dp"
@@ -117,13 +121,15 @@
             android:layout_gravity="center"
             android:background="@drawable/orange"
             android:visibility="invisible"
+            android:id="@+id/img_orange"
             />
         <ImageView
             android:layout_width="308dp"
             android:layout_height="242dp"
             android:layout_gravity="center"
             android:background="@drawable/red"
-            android:visibility="visible"
+            android:visibility="invisible"
+            android:id="@+id/img_red"
             />
 
     </FrameLayout>

@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 public class CalculatorActivity extends AppCompatActivity {
@@ -28,6 +29,7 @@ public class CalculatorActivity extends AppCompatActivity {
         Button.OnClickListener mClickListener = new View.OnClickListener() {
             public void onClick(View view) {
                 Button button = (Button) view;
+                TextView textresult = (TextView) findViewById(R.id.textResult);
                 String clickValue = button.getText().toString();
 
                 switch (clickValue) {
@@ -45,15 +47,19 @@ public class CalculatorActivity extends AppCompatActivity {
                             switch (operator) {
                                 case "+":
                                     cal = Integer.parseInt(firstValue) + Integer.parseInt(secondValue);
+                                    textresult.setText("계산 결과 : " + cal.toString());
                                     break;
                                 case "-":
                                     cal = Integer.parseInt(firstValue) - Integer.parseInt(secondValue);
+                                    textresult.setText("계산 결과 : " + cal.toString());
                                     break;
                                 case "*":
                                     cal = Integer.parseInt(firstValue) * Integer.parseInt(secondValue);
+                                    textresult.setText("계산 결과 : " + cal.toString());
                                     break;
                                 case "/":
                                     cal = Integer.parseInt(firstValue) / Integer.parseInt(secondValue);
+                                    textresult.setText("계산 결과 : " + cal.toString());
                                     break;
                             }
 

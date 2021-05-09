@@ -158,15 +158,36 @@
                         tools:ignore="RtlCompat" />
                 </LinearLayout>
             </LinearLayout>
-            <ImageButton
+            <LinearLayout
                 android:layout_column="2"
                 android:layout_row="0"
-                android:src="@drawable/right_icon"
-                android:background="#ffffff"
                 android:layout_width="30dp"
                 android:layout_height="182dp"
-                android:scaleType="fitCenter"
-                android:layout_margin="2.5dp"/>
+                android:background="#ffffff"
+                android:orientation="vertical"
+                android:layout_margin="2.5dp">
+                <ImageButton
+                    android:layout_width="30dp"
+                    android:layout_height="61dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/right_icon"
+                    android:scaleType="fitCenter"
+                    android:background="#ffffff"/>
+                <ImageButton
+                    android:layout_width="30dp"
+                    android:layout_height="61dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/right_icon"
+                    android:scaleType="fitCenter"
+                    android:background="#ffffff"
+                    />
+                <LinearLayout
+                    android:layout_width="30dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:background="#ffffff"></LinearLayout>
+            </LinearLayout>
+
             <ImageButton
                 android:layout_column="0"
                 android:layout_row="1"

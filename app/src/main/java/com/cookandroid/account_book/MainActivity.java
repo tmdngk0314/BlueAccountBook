@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
         ImageButton memobutton = (ImageButton)findViewById(R.id.memobutton);
         ImageButton successbutton = (ImageButton)findViewById(R.id.successbutton);
         ImageButton informationbutton = (ImageButton)findViewById(R.id.informationbutton);
+        ImageButton calculatorbutton = (ImageButton)findViewById(R.id.calculatorbutton);
 
         calcbutton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,6 +42,13 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent5 = new Intent(getApplicationContext(), Information.class);
                 startActivity(intent5);
+            }
+        });
+        calculatorbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent6 = new Intent(getApplicationContext(), CalculatorActivity.class);
+                startActivity(intent6);
             }
         });
 

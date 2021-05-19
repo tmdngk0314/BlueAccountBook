@@ -1,6 +1,7 @@
 package com.cookandroid.account_book;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.view.menu.MenuView;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -23,6 +24,8 @@ import android.os.Bundle;
 
 public class MemoActivity extends AppCompatActivity {
 
+    MemoSqlite dbHelper;
+
     RecyclerView recyclerView;
     RecyclerAdapter recyclerAdapter;
     Button btnAdd;
@@ -35,15 +38,11 @@ public class MemoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_memo);
 
         Intent intent3 = getIntent();
-
-        memoList = new ArrayList<>();
-        memoList.add(new Memo("test1","test22",0));
-        memoList.add(new Memo("test2","test22",0));
-        memoList.add(new Memo("test3","test22",0));
-        memoList.add(new Memo("test4","test22",1));
-        memoList.add(new Memo("test5","test22",1));
+        dbHelper = new MemoSqlite(MemoActivity.this);
+        memoList = dbHelper.selectAll();  //리사이클러뷰에 연결해두었던 memoList에 DB에서 가져온 리스트를 넣어줌
 
         recyclerView = findViewById(R.id.recyclerview);
+
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(MemoActivity.this);
         recyclerView.setLayoutManager(linearLayoutManager);
 
@@ -55,9 +54,27 @@ public class MemoActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //새로운 메모 작성
+                Intent memointent = new Intent(MemoActivity.this,MemoAddActivity.class);
+                startActivityForResult(memointent, 0);
 
             }
         });
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if(requestCode == 0){
+            String strMain = data.getStringExtra("main");
+            String strSub = data.getStringExtra("sub");
+
+            Memo memo = new Memo(strMain,strSub,0);
+            recyclerAdapter.addItem(memo);
+            recyclerAdapter.notifyDataSetChanged();
+
+            dbHelper.insertMemo(memo);
+        }
     }
 
     class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ItemViewHolder>{
@@ -83,6 +100,8 @@ public class MemoActivity extends AppCompatActivity {
         @Override
         public void onBindViewHolder(@NonNull ItemViewHolder itemViewHolder, int i) {
             Memo memo = listdata.get(i);
+
+            itemViewHolder.maintext.setTag(memo.getSeq());
 
             itemViewHolder.maintext.setText(memo.getMaintext());
             itemViewHolder.subtext.setText(memo.getSubtext());
@@ -116,6 +135,22 @@ public class MemoActivity extends AppCompatActivity {
                 maintext = itemView.findViewById(R.id.item_maintext);
                 subtext = itemView.findViewById(R.id.item_subtext);
                 img = itemView.findViewById(R.id.item_image);
+
+                itemView.setOnLongClickListener(new View.OnLongClickListener() {
+                    @Override
+                    public boolean onLongClick(View view) {
+
+                        int position = getAdapterPosition();
+                        int seq = (int)maintext.getTag();
+
+                        if(position  != RecyclerView.NO_POSITION){
+                            dbHelper.deleteMemo(seq);
+                            removeItem(position);
+                            notifyDataSetChanged();
+                        }
+                        return false;
+                    }
+                });
             }
 
         }

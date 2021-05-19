@@ -19,6 +19,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/btnAdd"
-        android:text="ADD"/>
+        android:text="메모 추가하기"/>
 
 </LinearLayout>

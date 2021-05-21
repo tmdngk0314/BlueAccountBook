@@ -48,6 +48,9 @@ public class MemoAddActivity extends AppCompatActivity {
         findViewById(R.id.btnNo).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Intent intent = new Intent();
+                setResult(RESULT_CANCELED, intent);
+
                 finish();
             }
         });

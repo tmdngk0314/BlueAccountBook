@@ -58,8 +58,12 @@ public class CalculatorActivity extends AppCompatActivity {
                                     textresult.setText("계산 결과 : " + cal.toString());
                                     break;
                                 case "/":
+                                    if(Integer.parseInt(secondValue) != 0){
                                     cal = Integer.parseInt(firstValue) / Integer.parseInt(secondValue);
-                                    textresult.setText("계산 결과 : " + cal.toString());
+                                    textresult.setText("계산 결과 : " + cal.toString());}
+                                    else
+                                    {cal=0;
+                                    textresult.setText("계산 결과 : " + cal.toString());}
                                     break;
                             }
 

@@ -4,16 +4,17 @@
     android:layout_height="match_parent"
     android:background="#A2CCFF">
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="#000000"
+        android:textColor="#FFFFFF"
         android:text="도움말"
-        android:textSize="50dp"
+        android:textSize="30dp"
+        android:gravity="center"
         android:layout_margin="10dp"/>
     <LinearLayout
-        android:layout_width="300dp"
-        android:layout_height="550dp"
-        android:background="@drawable/bold2_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/border_sky"
         android:layout_gravity="center"
         android:padding="10dp">
         <ScrollView
@@ -25,38 +26,75 @@
                 android:layout_height="fill_parent"
                 android:orientation="vertical">
                 <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="메인화면"
+                    android:textSize="25dp"
+                    android:layout_margin="9dp"/>
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="1.처음 화면에서 월별과 일별 지출,수입, 저축 내용을 보실 수 있습니다."
+                    android:text="1) 월별과 일별 지출, 수입, 저축, 잔액 내용을 확인할 수 있고 왼쪽, 오른쪽 버튼을 이용하여 날짜를 이동할 수 있습니다."
+                    android:textSize="18dp"
+                    android:layout_margin="4dp"
+                    android:textColor="#000000"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2) 총 자산, 총 저축 금액을 "
+                    android:textSize="18dp"
+                    android:layout_margin="4dp"
+                    android:textColor="#000000"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="달력 기능"
                     android:textSize="25dp"
+                    android:layout_margin="9dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="달력을 사용해 원하는 날짜에 지출,수입,저축 내역을 확인해 보세요"
+                    android:textSize="18dp"
+                    android:layout_margin="9dp"
+                    android:textColor="#000000"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="목표지출 기능"
+                    android:textSize="25dp"
+                    android:layout_margin="9dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="목표 지출을 설정해놓고 목표 지출을 넘지 않게 노력해보세요."
+                    android:textSize="18dp"
+                    android:layout_margin="9dp"
+                    android:textColor="#000000"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="메모 기능"
+                    android:textSize="25dp"
+                    android:layout_margin="9dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="메모 기능으로 특이사항이 생겼을 시 메모를 해보세요."
+                    android:textSize="18dp"
                     android:layout_margin="9dp"
                     android:textColor="#000000"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="2.달력을 사용해 원하는 날짜에 지출,수입,저축 내역을 확인해 보세요"
+                    android:text="내역 기능"
                     android:textSize="25dp"
-                    android:layout_margin="9dp"
-                    android:textColor="#000000"/>
+                    android:layout_margin="9dp"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="3. 목표 지출을 설정해놓고 목표 지출을 넘지 않게 노력해보세요."
-                    android:textSize="25dp"
-                    android:layout_margin="9dp"
-                    android:textColor="#000000"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="4.메모 기능으로 특이사항이 생겼을 시 메모를 해보세요."
-                    android:textSize="25dp"
-                    android:layout_margin="9dp"
-                    android:textColor="#000000"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="5.내역 아이콘 버튼으로 들어가 메일 지출, 수입, 저축을 적는 습관을 가져보세요."
-                    android:textSize="25dp"
+                    android:text="내역 아이콘 버튼으로 들어가 메일 지출, 수입, 저축을 적는 습관을 가져보세요."
+                    android:textSize="18dp"
                     android:layout_margin="9dp"
                     android:textColor="#000000"/>
 

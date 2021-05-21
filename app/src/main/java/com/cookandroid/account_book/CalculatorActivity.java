@@ -76,6 +76,29 @@ public class CalculatorActivity extends AppCompatActivity {
                                     operator = "";
                                     return;
                                 }
+                                else if ("+".equals(clickValue)) {
+                                    operator = "";
+                                    return;
+                                }
+                                else if ("-".equals(clickValue)) {
+                                    operator = "";
+                                    return;
+                                }
+                                else if ("/".equals(clickValue)) {
+                                    operator = "";
+                                    return;
+                                }
+                                else if ("*".equals(clickValue)) {
+                                    operator = "";
+                                    return;
+                                }
+                                else if ("C".equals(clickValue)) {
+                                    operator = "";
+                                    return;
+                                }
+                                else{
+                                    operator = "";
+                                }
                                 firstValue = cal.toString();
                             }
                             operator = clickValue;
@@ -92,22 +115,27 @@ public class CalculatorActivity extends AppCompatActivity {
                                 operator = "";
                                 return;
                             }
-                           if ("+".equals(clickValue)) {
+                            else if ("+".equals(clickValue)) {
                                 operator = "";
                                 return;
                             }
-                            if ("-".equals(clickValue)) {
+                            else if ("-".equals(clickValue)) {
                                 operator = "";
                                 return;
                             }
-                            if ("/".equals(clickValue)) {
+                            else if ("/".equals(clickValue)) {
                                 operator = "";
                                 return;
                             }
-                            if ("*".equals(clickValue)) {
+                            else if ("*".equals(clickValue)) {
                                 operator = "";
                                 return;
                             }
+                            else if ("C".equals(clickValue)) {
+                                operator = "";
+                                return;
+                            }
+                            else{operator = "";}
 
                             operator = clickValue;
 

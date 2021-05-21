@@ -41,7 +41,28 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="2) 총 자산, 총 저축 금액을 "
+                    android:text="2) 총 자산, 총 저축 금액을 확인할 수 있습니다."
+                    android:textSize="18dp"
+                    android:layout_margin="4dp"
+                    android:textColor="#000000"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3) 카테고리란에서 가장 많이 지출된 카테고리를 확인할 수 있습니다."
+                    android:textSize="18dp"
+                    android:layout_margin="4dp"
+                    android:textColor="#000000"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4) 목표지출란에서 목표지출의 몇 퍼센트를 지출하였는지 '양호', '보통', '위험', '초과' 네가지로 확인할 수 있습니다."
+                    android:textSize="18dp"
+                    android:layout_margin="4dp"
+                    android:textColor="#000000"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5) 아래 아이콘5가지 (순서대로 '달력', '내역', '메모', '목표지출', '계산기') 를 통해 여러 기능들을 사용할 수 있습니다."
                     android:textSize="18dp"
                     android:layout_margin="4dp"
                     android:textColor="#000000"/>
@@ -54,22 +75,36 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="달력을 사용해 원하는 날짜에 지출,수입,저축 내역을 확인해 보세요"
+                    android:text="1) 달력의 날짜 클릭 시 지출, 수입, 저축 내역을 입력할 수 있고 저장할 수 있습니다."
                     android:textSize="18dp"
-                    android:layout_margin="9dp"
+                    android:layout_margin="4dp"
+                    android:textColor="#000000"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2) 저장한 내용을 수정 및 삭제할 수 있습니다."
+                    android:textSize="18dp"
+                    android:layout_margin="4dp"
+                    android:textColor="#000000"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3) 달력기능에서 입력한 내용이 내역기능에도 똑같이 저장됩니다."
+                    android:textSize="18dp"
+                    android:layout_margin="4dp"
                     android:textColor="#000000"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="목표지출 기능"
+                    android:text="내역 기능"
                     android:textSize="25dp"
                     android:layout_margin="9dp"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="목표 지출을 설정해놓고 목표 지출을 넘지 않게 노력해보세요."
+                    android:text="1) 내역기능입니다"
                     android:textSize="18dp"
-                    android:layout_margin="9dp"
+                    android:layout_margin="4dp"
                     android:textColor="#000000"/>
                 <TextView
                     android:layout_width="match_parent"
@@ -80,22 +115,56 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="메모 기능으로 특이사항이 생겼을 시 메모를 해보세요."
+                    android:text="1) 메모기능입니다"
                     android:textSize="18dp"
-                    android:layout_margin="9dp"
+                    android:layout_margin="4dp"
                     android:textColor="#000000"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="내역 기능"
+                    android:text="목표지출 기능"
                     android:textSize="25dp"
                     android:layout_margin="9dp"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="내역 아이콘 버튼으로 들어가 메일 지출, 수입, 저축을 적는 습관을 가져보세요."
+                    android:text="1) 매월 목표지출 금액을 입력합니다."
                     android:textSize="18dp"
-                    android:layout_margin="9dp"
+                    android:layout_margin="4dp"
+                    android:textColor="#000000"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2) 입력한 목표지출 금액의 몇 퍼센트를 지출하였는지 나타납니다."
+                    android:textSize="18dp"
+                    android:layout_margin="4dp"
+                    android:textColor="#000000"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3) 목표지출액 0~40% 지출 시 '양호', 41~70% 지출 시 '보통', 71~100% 지출 시 '위험', 100% 초과 시 '초과' 이미지가 나타납니다."
+                    android:textSize="18dp"
+                    android:layout_margin="4dp"
+                    android:textColor="#000000"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="계산기 기능"
+                    android:textSize="25dp"
+                    android:layout_margin="9dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1) 계산기 기능을 통해 금액을 쉽게 계산해서 입력할 수 있게 할 수 있습니다."
+                    android:textSize="18dp"
+                    android:layout_margin="4dp"
+                    android:textColor="#000000"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2) 연속으로 계산이 가능합니다."
+                    android:textSize="18dp"
+                    android:layout_margin="4dp"
                     android:textColor="#000000"/>
 
             </LinearLayout>

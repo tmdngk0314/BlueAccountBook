@@ -28,6 +28,29 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent1);
             }
         });
+        listbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent2 = new Intent(getApplicationContext(), ListActivity.class);
+                startActivity(intent2);
+            }
+        });
+
+        listbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent2 = new Intent(getApplicationContext(), ListActivity.class);
+                startActivity(intent2);
+            }
+        });
+
+        listbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent2 = new Intent(getApplicationContext(), ListActivity.class);
+                startActivity(intent2);
+            }
+        });
 
         listbutton.setOnClickListener(new View.OnClickListener() {
             @Override

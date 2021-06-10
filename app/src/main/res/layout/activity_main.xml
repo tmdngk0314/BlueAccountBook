@@ -10,7 +10,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:layout_margin="5dp"
+        android:layout_margin="30dp"
         android:layout_alignParentTop="true"
         android:id="@+id/biglinear1">
         <GridLayout
@@ -348,9 +348,9 @@
         android:layout_below="@+id/biglinear1"
         android:orientation="vertical"
         android:layout_centerInParent="true"
-        android:layout_margin="5dp"
+        android:layout_margin="15dp"
         android:background="@drawable/border_sky"
-        android:padding="4dp">
+        android:padding="3dp">
         <GridLayout
             android:layout_width="332dp"
             android:layout_height="160dp"
@@ -470,7 +470,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="#A2CCFF"
-            android:src="@drawable/calendar"
+            android:src="@drawable/calendar1"
             android:scaleType="fitCenter"
             android:layout_weight="1"
             android:id="@+id/calcbutton"
@@ -479,7 +479,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="#A2CCFF"
-            android:src="@drawable/list"
+            android:src="@drawable/list1"
             android:scaleType="fitCenter"
             android:layout_weight="1"
             android:id="@+id/listbutton"
@@ -488,24 +488,25 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="#A2CCFF"
-            android:src="@drawable/memo"
+            android:src="@drawable/memo1"
             android:scaleType="fitCenter"
             android:layout_weight="1"
             android:id="@+id/memobutton"
             />
+
         <ImageButton
+            android:id="@+id/successbutton"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#A2CCFF"
-            android:src="@drawable/success"
-            android:scaleType="fitCenter"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:id="@+id/successbutton"/>
+            android:background="#A2CCFF"
+            android:scaleType="fitCenter"
+            android:src="@drawable/success1" />
         <ImageButton
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="#A2CCFF"
-            android:src="@drawable/calculator"
+            android:src="@drawable/calculator1"
             android:scaleType="fitCenter"
             android:layout_weight="1"
             android:id="@+id/calculatorbutton"

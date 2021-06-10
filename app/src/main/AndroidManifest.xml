@@ -10,7 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Account_book">
         <activity android:name=".ListActivity"></activity>
-        <activity android:name=".ListAddActivity" />
         <activity android:name=".MemoAddActivity" />
         <activity android:name=".MemoActivity" />
         <activity android:name=".CalculatorActivity" />

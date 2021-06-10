@@ -29,6 +29,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        listbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent2 = new Intent(getApplicationContext(), ListActivity.class);
+                startActivity(intent2);
+            }
+        });
+
         memobutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

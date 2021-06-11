@@ -12,7 +12,8 @@
         android:layout_height="wrap_content"
         android:background="@drawable/calculator_title"
         android:layout_centerHorizontal="true"
-        android:layout_above="@+id/calculatorlay"/>
+        android:layout_above="@+id/calculatorlay"
+        />
     <LinearLayout
         android:layout_width="300dp"
         android:layout_height="500dp"

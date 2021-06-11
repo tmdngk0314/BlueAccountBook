@@ -10,10 +10,9 @@
     android:orientation="vertical">
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:background="@drawable/success_img"
+        android:layout_height="wrap_content"
+        android:background="@drawable/success_title"
         android:layout_gravity="center"
-        android:layout_margin="20dp"
         />
     <LinearLayout
         android:layout_margin="10dp"

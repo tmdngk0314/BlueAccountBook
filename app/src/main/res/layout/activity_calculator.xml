@@ -7,12 +7,10 @@
     tools:context=".CalculatorActivity"
     android:background="#A2CCFF"
     >
-    <TextView
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="40dp"
-        android:text="푸른 계산기"
-        android:textColor="#385EEA"
+        android:background="@drawable/calculator_title"
         android:layout_centerHorizontal="true"
         android:layout_above="@+id/calculatorlay"/>
     <LinearLayout

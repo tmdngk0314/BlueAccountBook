@@ -56,8 +56,8 @@
                         <Button
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:text="2021.06"
+                            android:layout_weight="0.5"
+                            android:text="2021년06월"
                             android:textColor="#000000"
                             android:background="#ffffff"
                             />
@@ -225,8 +225,8 @@
                             android:id="@+id/btnDate2"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:text="2021.06.16"
+                            android:layout_weight="0.5"
+                            android:text="2021년06월16일"
                             android:textColor="#000000"
                             android:background="#ffffff"
                             android:onClick="OnClickHandler"

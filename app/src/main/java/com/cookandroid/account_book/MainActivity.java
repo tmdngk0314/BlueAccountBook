@@ -14,7 +14,7 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     private DatePickerDialog.OnDateSetListener callbackMethod;
-    private Button button_Date;
+    private Button button_Date1,button_Date2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -90,7 +90,8 @@ public class MainActivity extends AppCompatActivity {
     }
     public void InitializeView()
     {
-        button_Date = (Button) findViewById(R.id.btnDate2);
+        button_Date1 = (Button) findViewById(R.id.btnDate1);
+        button_Date2 = (Button) findViewById(R.id.btnDate2);
     }
 
     public void InitializeListener()
@@ -99,7 +100,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth)
             {
-                button_Date.setText(year + "년" + (monthOfYear+1) + "월" + dayOfMonth + "일");
+                button_Date1.setText(year + "년" + (monthOfYear+1) + "월" + dayOfMonth + "일");
+                button_Date2.setText(year + "년" + (monthOfYear+1) + "월" + dayOfMonth + "일");
             }
         };
     }

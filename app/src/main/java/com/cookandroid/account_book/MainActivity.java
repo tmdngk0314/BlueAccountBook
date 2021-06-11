@@ -2,17 +2,26 @@ package com.cookandroid.account_book;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.ImageButton;
 
 public class MainActivity extends AppCompatActivity {
+
+    private DatePickerDialog.OnDateSetListener callbackMethod;
+    private Button button_Date;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        this.InitializeView();
+        this.InitializeListener();
 
         ImageButton calcbutton = (ImageButton)findViewById(R.id.calcbutton);
         ImageButton listbutton = (ImageButton)findViewById(R.id.listbutton);
@@ -68,8 +77,27 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+    }
+    public void InitializeView()
+    {
+        button_Date = (Button) findViewById(R.id.btnDate2);
+    }
 
+    public void InitializeListener()
+    {
+        callbackMethod = new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth)
+            {
+                button_Date.setText(year + "년" + (monthOfYear+1) + "월" + dayOfMonth + "일");
+            }
+        };
+    }
 
+    public void OnClickHandler(View view)
+    {
+        DatePickerDialog dialog = new DatePickerDialog(this, callbackMethod, 2021, 6, 16);
 
+        dialog.show();
     }
 }

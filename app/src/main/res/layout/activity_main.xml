@@ -57,7 +57,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
-                            android:text="2021.05"
+                            android:text="2021.06"
                             android:textColor="#000000"
                             android:background="#ffffff"
                             />
@@ -222,12 +222,14 @@
                             android:background="#ffffff"
                             />
                         <Button
+                            android:id="@+id/btnDate2"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
-                            android:text="2021.05.12"
+                            android:text="2021.06.16"
                             android:textColor="#000000"
                             android:background="#ffffff"
+                            android:onClick="OnClickHandler"
                             />
                         <Button
                             android:layout_width="match_parent"

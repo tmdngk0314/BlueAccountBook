@@ -9,7 +9,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class ListActivity extends AppCompatActivity {
 
@@ -17,6 +21,7 @@ public class ListActivity extends AppCompatActivity {
     EditText edtSuip,edtJichull,edtJurchuk,edtJurchukResult,edtJichullResult,edtSuipResult;
     Button btnClear,btnInsert,btnSelect;
     SQLiteDatabase sqlDB;
+    TextView textdate;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +41,15 @@ public class ListActivity extends AppCompatActivity {
         btnInsert = (Button)findViewById(R.id.btnInsert);
         btnSelect = (Button)findViewById(R.id.btnSelect);
 
+        textdate = (TextView)findViewById(R.id.textdate);
+
         dbHelper = new ListDBHelper(this);
+
+        Date date = new Date();
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        String substr = sdf.format(date);
+        textdate.setText(substr); // 오늘 날짜 삽입
+
         btnClear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

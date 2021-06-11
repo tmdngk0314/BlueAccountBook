@@ -34,6 +34,7 @@ public class Success extends AppCompatActivity {
         success_save_btn = (Button)findViewById(R.id.success_save_btn);
 
         Intent inIntent5 = getIntent();
+        Intent intent = new Intent(getApplicationContext(),MainActivity.class);
 
         success_save_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,12 +68,15 @@ public class Success extends AppCompatActivity {
                             img_orange.setVisibility(View.INVISIBLE);
                             img_red.setVisibility(View.VISIBLE);
                         }
+                        intent.putExtra("Num2",Integer.parseInt(num2));
+                        startActivityForResult(intent,0);
+                }
 
                 else{
                     Toast.makeText(getApplicationContext(),"음수나 0은 쓸 수 없습니다.",Toast.LENGTH_SHORT).show();
                 }
 
-            }}
+            }
 
         });
 

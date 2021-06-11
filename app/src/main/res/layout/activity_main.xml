@@ -95,7 +95,8 @@
                         android:textColor="#ff0000"
                         android:layout_weight="3"
                         android:textAlignment="textEnd"
-                        tools:ignore="RtlCompat" />
+                        tools:ignore="RtlCompat"
+                        android:id="@+id/MonthJichul"/>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -265,7 +266,8 @@
                         android:textColor="#ff0000"
                         android:layout_weight="3"
                         android:textAlignment="textEnd"
-                        tools:ignore="RtlCompat" />
+                        tools:ignore="RtlCompat"
+                        android:id="@+id/TodayJichul"/>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -459,7 +461,8 @@
                 android:background="#ffffff"
                 android:layout_gravity="center_vertical"
                 android:gravity="center"
-                android:textAlignment="center"/>
+                android:textAlignment="center"
+                android:id="@+id/main_success"/>
         </GridLayout>
     </LinearLayout>
     <LinearLayout

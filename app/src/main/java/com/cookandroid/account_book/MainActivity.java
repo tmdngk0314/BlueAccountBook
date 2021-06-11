@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,12 +24,20 @@ public class MainActivity extends AppCompatActivity {
         this.InitializeView();
         this.InitializeListener();
 
+        Intent inIntent = getIntent();
+        final int Vaule = inIntent.getIntExtra("Num2",0);
+
         ImageButton calcbutton = (ImageButton)findViewById(R.id.calcbutton);
         ImageButton listbutton = (ImageButton)findViewById(R.id.listbutton);
         ImageButton memobutton = (ImageButton)findViewById(R.id.memobutton);
         ImageButton successbutton = (ImageButton)findViewById(R.id.successbutton);
         ImageButton informationbutton = (ImageButton)findViewById(R.id.informationbutton);
         ImageButton calculatorbutton = (ImageButton)findViewById(R.id.calculatorbutton);
+
+        TextView TodayJichul = (TextView)findViewById(R.id.TodayJichul);
+        TextView MonthJichul = (TextView)findViewById(R.id.MonthJichul);
+
+
 
         calcbutton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -76,6 +85,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent6);
             }
         });
+
 
     }
     public void InitializeView()

@@ -96,7 +96,7 @@
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="80dp"
         android:orientation="horizontal">
     <TextView
         android:layout_width="wrap_content"
@@ -109,7 +109,8 @@
             android:layout_height="wrap_content"
             android:textSize="26dp"
             android:text="0"
-            android:textColor="#ff0000"/>
+            android:textColor="#ff0000"
+            android:id="@+id/todaybalance"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -208,7 +209,7 @@
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="80dp"
         android:orientation="horizontal">
         <TextView
             android:layout_width="wrap_content"
@@ -221,6 +222,7 @@
             android:layout_height="wrap_content"
             android:textSize="26dp"
             android:text="0"
+            android:id="@+id/monthbalance"
             android:textColor="#ff0000"/>
         <TextView
             android:layout_width="wrap_content"
@@ -237,7 +239,7 @@
             android:layout_height="60dp"
             android:text="잔액 보기"
             android:layout_centerVertical="true"
-            android:id="@+id/bogi"
+            android:id="@+id/balance"
             android:textSize="17dp"
             android:layout_marginRight="20dp"/>
         <Button
@@ -245,7 +247,7 @@
             android:layout_height="60dp"
             android:text="저장"
             android:textSize="20dp"
-            android:layout_toRightOf="@+id/bogi"
+            android:layout_toRightOf="@+id/balance"
             android:layout_centerVertical="true"
             android:id="@+id/listaddsave"/>
     </RelativeLayout>

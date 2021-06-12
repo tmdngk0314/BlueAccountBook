@@ -168,7 +168,7 @@
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:layout_gravity="center"
-        android:text="저장"
+        android:text="확인"
         android:textColor="#70ADF8"
         android:textSize="26dp"
         android:background="@drawable/bold2_layout"

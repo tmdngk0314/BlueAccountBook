@@ -103,7 +103,7 @@ public class MemoActivity extends AppCompatActivity {
         @Override
         public int getItemCount() {
             return listdata.size();
-        }
+        } //아이템 개수를 반환
 
         @Override
         public void onBindViewHolder(@NonNull ItemViewHolder itemViewHolder, int i) {

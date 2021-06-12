@@ -416,7 +416,7 @@
     <ImageButton
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:layout_margin="10dp"
+        android:layout_marginTop="10dp"
         android:layout_below="@id/biglinear2"
         android:id="@+id/listaddbtn"
         android:background="@drawable/list_add"

@@ -97,7 +97,8 @@
                         android:layout_weight="3"
                         android:textAlignment="textEnd"
                         tools:ignore="RtlCompat"
-                        android:id="@+id/MonthJichul"/>
+                        android:id="@+id/MonthJichul"
+                        android:layout_marginRight="5dp"/>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -117,7 +118,9 @@
                         android:textColor="#0000ff"
                         android:layout_weight="3"
                         android:textAlignment="textEnd"
-                        tools:ignore="RtlCompat" />
+                        tools:ignore="RtlCompat"
+                        android:id="@+id/MonthSuip"
+                        android:layout_marginRight="5dp"/>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -137,7 +140,9 @@
                         android:textColor="#00ff00"
                         android:layout_weight="3"
                         android:textAlignment="textEnd"
-                        tools:ignore="RtlCompat" />
+                        tools:ignore="RtlCompat"
+                        android:id="@+id/MonthJurchuk"
+                        android:layout_marginRight="5dp"/>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -157,7 +162,9 @@
                         android:textColor="#000000"
                         android:layout_weight="3"
                         android:textAlignment="textEnd"
-                        tools:ignore="RtlCompat" />
+                        tools:ignore="RtlCompat"
+                        android:id="@+id/MonthBalance"
+                        android:layout_marginRight="5dp"/>
                 </LinearLayout>
             </LinearLayout>
             <LinearLayout
@@ -268,7 +275,8 @@
                         android:layout_weight="3"
                         android:textAlignment="textEnd"
                         tools:ignore="RtlCompat"
-                        android:id="@+id/TodayJichul"/>
+                        android:id="@+id/TodayJichul"
+                        android:layout_marginRight="5dp"/>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -288,7 +296,9 @@
                         android:textColor="#0000ff"
                         android:layout_weight="3"
                         android:textAlignment="textEnd"
-                        tools:ignore="RtlCompat" />
+                        tools:ignore="RtlCompat"
+                        android:id="@+id/TodaySuip"
+                        android:layout_marginRight="5dp"/>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -308,7 +318,9 @@
                         android:textColor="#00ff00"
                         android:layout_weight="3"
                         android:textAlignment="textEnd"
-                        tools:ignore="RtlCompat" />
+                        tools:ignore="RtlCompat"
+                        android:id="@+id/TodayJurchuk"
+                        android:layout_marginRight="5dp"/>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -328,7 +340,9 @@
                         android:textColor="#000000"
                         android:layout_weight="3"
                         android:textAlignment="textEnd"
-                        tools:ignore="RtlCompat" />
+                        tools:ignore="RtlCompat"
+                        android:id="@+id/TodayBalance"
+                        android:layout_marginRight="5dp"/>
                 </LinearLayout>
 
             </LinearLayout>

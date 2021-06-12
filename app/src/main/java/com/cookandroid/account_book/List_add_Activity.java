@@ -50,6 +50,33 @@ public class List_add_Activity extends AppCompatActivity {
             }
         });
 
+        listaddsave.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Tjichul = todayjichul.getText().toString();
+                Tsuip = todaysuip.getText().toString();
+                Tjurchuk = todayjurchuk.getText().toString();
+                Mjichul = monthjichul.getText().toString();
+                Msuip = monthsuip.getText().toString();
+                Mjurchuk = monthjurchuk.getText().toString();
+
+                Balance1 = Integer.parseInt(Tsuip)-(Integer.parseInt(Tjichul)+Integer.parseInt(Tjurchuk));
+                Balance2 = Integer.parseInt(Msuip)-(Integer.parseInt(Mjichul)+Integer.parseInt(Mjurchuk));
+
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                intent.putExtra("ToJichul",Tjichul);
+                intent.putExtra("ToSuip",Tsuip);
+                intent.putExtra("ToJurchuk",Tjurchuk);
+                intent.putExtra("MonJichul",Mjichul);
+                intent.putExtra("MonSuip",Msuip);
+                intent.putExtra("MonJurchuk",Mjurchuk);
+                intent.putExtra("BalToday",Balance1.toString());
+                intent.putExtra("BalMonth",Balance2.toString());
+                startActivity(intent);
+
+            }
+        });
+
 
 
     }

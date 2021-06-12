@@ -25,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
         this.InitializeListener();
 
         Intent inIntent = getIntent();
+        String TJi,TS,TJur,MJi,MS,MJur,TB,MB;
+
         final int Vaule = inIntent.getIntExtra("Num2",0);
 
         ImageButton calcbutton = (ImageButton)findViewById(R.id.calcbutton);
@@ -36,8 +38,32 @@ public class MainActivity extends AppCompatActivity {
         ImageButton listaddbtn = (ImageButton)findViewById(R.id.listaddbtn);
 
         TextView TodayJichul = (TextView)findViewById(R.id.TodayJichul);
+        TextView TodaySuip = (TextView)findViewById(R.id.TodaySuip);
+        TextView TodayJurchuk = (TextView)findViewById(R.id.TodayJurchuk);
+        TextView TodayBalance = (TextView)findViewById(R.id.TodayBalance);
         TextView MonthJichul = (TextView)findViewById(R.id.MonthJichul);
+        TextView MonthSuip = (TextView)findViewById(R.id.MonthSuip);
+        TextView MonthJurchuk = (TextView)findViewById(R.id.MonthJurchuk);
+        TextView MonthBalance = (TextView)findViewById(R.id.MonthBalance);
 
+        TJi = inIntent.getStringExtra("ToJichul");
+        TS = inIntent.getStringExtra("ToSuip");
+        TJur = inIntent.getStringExtra("ToJurchuk");
+        MJi = inIntent.getStringExtra("MonJichul");
+        MS = inIntent.getStringExtra("MonSuip");
+        MJur = inIntent.getStringExtra("MonJurchuk");
+
+         TB = inIntent.getStringExtra("BalToday");
+         MB = inIntent.getStringExtra("BalMonth");
+
+         TodayJichul.setText(TJi+"원");
+        TodaySuip.setText(TS+"원");
+        TodayJurchuk.setText(TJur+"원");
+        TodayBalance.setText(TB+"원");
+        MonthJichul.setText(MJi+"원");
+        MonthSuip.setText(MS+"원");
+        MonthJurchuk.setText(MJur+"원");
+        MonthBalance.setText(MB+"원");
 
 
         calcbutton.setOnClickListener(new View.OnClickListener() {

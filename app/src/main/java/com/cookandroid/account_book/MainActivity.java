@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         ImageButton successbutton = (ImageButton)findViewById(R.id.successbutton);
         ImageButton informationbutton = (ImageButton)findViewById(R.id.informationbutton);
         ImageButton calculatorbutton = (ImageButton)findViewById(R.id.calculatorbutton);
+        ImageButton listaddbtn = (ImageButton)findViewById(R.id.listaddbtn);
 
         TextView TodayJichul = (TextView)findViewById(R.id.TodayJichul);
         TextView MonthJichul = (TextView)findViewById(R.id.MonthJichul);
@@ -44,6 +45,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent1 = new Intent(getApplicationContext(), CalendarActivity.class);
                 startActivity(intent1);
+            }
+        });
+
+        listaddbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent11 = new Intent(getApplicationContext(), List_add_Activity.class);
+                startActivity(intent11);
             }
         });
 

@@ -2,7 +2,7 @@ package com.cookandroid.account_book;
 
 import java.io.Serializable;
 
-public class Memo implements Serializable {
+public class Memo implements Serializable { // 직렬화형태로 전송
 
     int seq;
     String maintext; //메모

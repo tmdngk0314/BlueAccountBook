@@ -45,7 +45,7 @@ public class CalendarActivity extends AppCompatActivity {
         final String userID=intent.getStringExtra("userID");
 
 
-        calendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
+        calendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() { //날짜를 선택하는 코드
             @Override
             public void onSelectedDayChange(@NonNull CalendarView view, int year, int month, int dayOfMonth) {
                 diaryTextView.setVisibility(View.VISIBLE);
@@ -59,7 +59,7 @@ public class CalendarActivity extends AppCompatActivity {
                 checkDay(year,month,dayOfMonth,userID);
             }
         });
-        save_Btn.setOnClickListener(new View.OnClickListener() {
+        save_Btn.setOnClickListener(new View.OnClickListener() {  // 저장 버튼을 누른 후 코드
             @Override
             public void onClick(View view) {
                 saveDiary(fname);
@@ -136,7 +136,7 @@ public class CalendarActivity extends AppCompatActivity {
         }
     }
     @SuppressLint("WrongConstant")
-    public void removeDiary(String readDay){
+    public void removeDiary(String readDay){ // 다이어리 제거
         FileOutputStream fos=null;
 
         try{
@@ -150,7 +150,7 @@ public class CalendarActivity extends AppCompatActivity {
         }
     }
     @SuppressLint("WrongConstant")
-    public void saveDiary(String readDay){
+    public void saveDiary(String readDay){  // 다이어리 저장
         FileOutputStream fos=null;
 
         try{

@@ -6,8 +6,8 @@ public class Memo implements Serializable {
 
     int seq;
     String maintext; //메모
-    String subtext; //날짜
-    int isdone; //완료여부
+    String subtext; //메모를 입력할 때 입력한 날짜를 자동으로 넣는다.
+    int isdone; //메모의 완료여부
 
     public Memo(int seq, String maintext, String subtext, int isdone) {
         this.seq = seq;

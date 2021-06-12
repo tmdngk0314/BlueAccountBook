@@ -30,7 +30,7 @@ public class MemoActivity extends AppCompatActivity {
     RecyclerAdapter recyclerAdapter;
     Button btnAdd;
 
-    List<Memo> memoList;
+    List<Memo> memoList; //리사이클러뷰에 들어갈 전역변수
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +39,8 @@ public class MemoActivity extends AppCompatActivity {
 
         Intent intent3 = getIntent();
         dbHelper = new MemoSqlite(MemoActivity.this);
-        memoList = dbHelper.selectAll();  //리사이클러뷰에 연결해두었던 memoList에 DB에서 가져온 리스트를 넣어줌
+        memoList = dbHelper.selectAll();
+        //리사이클러뷰에 연결해두었던 memoList에 DB에서 가져온 리스트를 넣어줌
 
         recyclerView = findViewById(R.id.recyclerview);
 
@@ -47,7 +48,7 @@ public class MemoActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(linearLayoutManager);
 
         recyclerAdapter = new RecyclerAdapter(memoList);
-        recyclerView.setAdapter(recyclerAdapter);
+        recyclerView.setAdapter(recyclerAdapter);  //리사이클러 뷰와 어댑터를 연결해줌
         btnAdd= findViewById(R.id.btnAdd);
 
         btnAdd.setOnClickListener(new View.OnClickListener() {
@@ -55,6 +56,7 @@ public class MemoActivity extends AppCompatActivity {
             public void onClick(View view) {
                 //새로운 메모 작성
                 Intent memointent = new Intent(MemoActivity.this,MemoAddActivity.class);
+                //intent를 사용해 메모를 MemoActivity에 불러옴
                 startActivityForResult(memointent, 0);
 
             }
@@ -63,23 +65,28 @@ public class MemoActivity extends AppCompatActivity {
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        //startACtivityForResult로 실행한 액티비티가 끝났을때 데이터를 받는다
         super.onActivityResult(requestCode, resultCode, data);
 
         if(requestCode == 0 && resultCode == RESULT_OK){
+            //startActivityForResult에 넣은 requestCode와 같을때
             String strMain = data.getStringExtra("main");
             String strSub = data.getStringExtra("sub");
+            //데이터를 받는다
 
             Memo memo = new Memo(strMain,strSub,0);
+            //받아온 데이터로 메모를 만든다
             recyclerAdapter.addItem(memo);
+            //생성된 메모 추가
             recyclerAdapter.notifyDataSetChanged();
 
             dbHelper.insertMemo(memo);
         }
     }
 
-    class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ItemViewHolder>{
+    class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ItemViewHolder>{ //어댑터 생성
 
-        private List<Memo> listdata;
+        private List<Memo> listdata;  //배열로 데이터들을 받는다
 
         public RecyclerAdapter(List<Memo> listdata){
             this.listdata = listdata;
@@ -88,7 +95,8 @@ public class MemoActivity extends AppCompatActivity {
         @NonNull
         @Override
         public ItemViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-            View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.activity_list_item, viewGroup,false);
+            View view = LayoutInflater.from(viewGroup.getContext()).inflate
+                    (R.layout.activity_list_item, viewGroup,false);
             return new ItemViewHolder(view);
         }
 
@@ -104,13 +112,10 @@ public class MemoActivity extends AppCompatActivity {
             itemViewHolder.maintext.setTag(memo.getSeq());
 
             itemViewHolder.maintext.setText(memo.getMaintext());
+            //메인텍스트에 Memo의 메인텍스트를 넣는다
             itemViewHolder.subtext.setText(memo.getSubtext());
+            //서브텍스트에 Memo의 서브텍스트를 넣는다
 
-            if(memo.getIsdone() == 0){
-                itemViewHolder.img.setBackgroundColor(Color.LTGRAY);
-            }else{
-                itemViewHolder.img.setBackgroundColor(Color.GREEN);
-            }
         }   //데이터를 레이아웃에 어떻게 넣어줄지 정한다.
 
         void addItem(Memo memo){

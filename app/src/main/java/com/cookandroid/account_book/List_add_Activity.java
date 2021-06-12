@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class List_add_Activity extends AppCompatActivity {
     private String Tjichul,Tsuip,Tjurchuk,Mjichul,Msuip,Mjurchuk;
-    private Integer Balance1 = 0,Balance2=0;
+    private Integer Balance1 = 0,Balance2=0,TotalJasan=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,6 +62,7 @@ public class List_add_Activity extends AppCompatActivity {
 
                 Balance1 = Integer.parseInt(Tsuip)-(Integer.parseInt(Tjichul)+Integer.parseInt(Tjurchuk));
                 Balance2 = Integer.parseInt(Msuip)-(Integer.parseInt(Mjichul)+Integer.parseInt(Mjurchuk));
+                TotalJasan = Balance2 + Integer.parseInt(Mjurchuk);
 
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 intent.putExtra("ToJichul",Tjichul);
@@ -72,6 +73,7 @@ public class List_add_Activity extends AppCompatActivity {
                 intent.putExtra("MonJurchuk",Mjurchuk);
                 intent.putExtra("BalToday",Balance1.toString());
                 intent.putExtra("BalMonth",Balance2.toString());
+                intent.putExtra("TotalJasan",TotalJasan.toString());
                 startActivity(intent);
 
             }

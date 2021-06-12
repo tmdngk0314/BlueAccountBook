@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         this.InitializeListener();
 
         Intent inIntent = getIntent();
-        String TJi,TS,TJur,MJi,MS,MJur,TB,MB;
+        String TJi,TS,TJur,MJi,MS,MJur,TB,MB,TotalJ;
 
         final int Vaule = inIntent.getIntExtra("Num2",0);
 
@@ -45,6 +45,8 @@ public class MainActivity extends AppCompatActivity {
         TextView MonthSuip = (TextView)findViewById(R.id.MonthSuip);
         TextView MonthJurchuk = (TextView)findViewById(R.id.MonthJurchuk);
         TextView MonthBalance = (TextView)findViewById(R.id.MonthBalance);
+        TextView AllJasan = (TextView)findViewById(R.id.AllJasan);
+        TextView AllJur = (TextView)findViewById(R.id.Alljur);
 
         TJi = inIntent.getStringExtra("ToJichul");
         TS = inIntent.getStringExtra("ToSuip");
@@ -55,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
 
          TB = inIntent.getStringExtra("BalToday");
          MB = inIntent.getStringExtra("BalMonth");
+         TotalJ = inIntent.getStringExtra("TotalJasan");
 
          TodayJichul.setText(TJi+"원");
         TodaySuip.setText(TS+"원");
@@ -64,6 +67,8 @@ public class MainActivity extends AppCompatActivity {
         MonthSuip.setText(MS+"원");
         MonthJurchuk.setText(MJur+"원");
         MonthBalance.setText(MB+"원");
+        AllJasan.setText(TotalJ+"원");
+        AllJur.setText(MJur+"원");
 
 
         calcbutton.setOnClickListener(new View.OnClickListener() {

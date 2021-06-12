@@ -398,6 +398,7 @@
                 android:layout_gravity="center_vertical"
                 android:gravity="center"
                 android:textAlignment="center"
+                android:id="@+id/AllJasan"
                 />
             <TextView
                 android:layout_width="83dp"
@@ -423,6 +424,7 @@
                 android:layout_gravity="center_vertical"
                 android:gravity="center"
                 android:textAlignment="center"
+                android:id="@+id/Alljur"
                 />
 
         </GridLayout>

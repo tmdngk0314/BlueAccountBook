@@ -143,7 +143,7 @@ public class MemoActivity extends AppCompatActivity {
 
                 itemView.setOnLongClickListener(new View.OnLongClickListener() {
                     @Override
-                    public boolean onLongClick(View view) {
+                    public boolean onLongClick(View view) { //클릭을 길게 누르면 삭제
 
                         int position = getAdapterPosition();
                         int seq = (int)maintext.getTag();

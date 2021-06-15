@@ -50,7 +50,7 @@ public class ListActivity extends AppCompatActivity {
         String substr = sdf.format(date);
         textdate.setText(substr); // 오늘 날짜 삽입
 
-        btnClear.setOnClickListener(new View.OnClickListener() {
+        btnClear.setOnClickListener(new View.OnClickListener() {  //초기화 버튼
             @Override
             public void onClick(View view) {
                 sqlDB = dbHelper.getWritableDatabase();
@@ -59,21 +59,21 @@ public class ListActivity extends AppCompatActivity {
             }
         });
 
-        btnInsert.setOnClickListener(new View.OnClickListener() {
+        btnInsert.setOnClickListener(new View.OnClickListener() {  // 정보 입력 버튼
             @Override
             public void onClick(View view) {
                 sqlDB = dbHelper.getWritableDatabase();
                 sqlDB.execSQL("INSERT INTO groupTBL VALUES('"+edtSuip.getText().toString() + "',"
-                        +edtJichull.getText().toString()+ ","+edtJurchuk.getText().toString()+");");
+                        +edtJichull.getText().toString()+ ","+edtJurchuk.getText().toString()+");"); //수입, 지출, 저축 입력
 
-                edtSuip.setText("");
+                edtSuip.setText("");              //입력후 정보 clear
                 edtJichull.setText("");
                 edtJurchuk.setText("");
                 sqlDB.close();
-                Toast.makeText(getApplicationContext(),"저장되었습니다",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(),"저장되었습니다",Toast.LENGTH_SHORT).show(); //저장되었다는 토스트 메세지
             }
         });
-        btnSelect.setOnClickListener(new View.OnClickListener() {
+        btnSelect.setOnClickListener(new View.OnClickListener() {  //조회 버튼
             @Override
             public void onClick(View view) {
                 sqlDB = dbHelper.getReadableDatabase();
@@ -84,13 +84,13 @@ public class ListActivity extends AppCompatActivity {
                 String strJichull = "지출" + "\r\n"+"--------"+"\r\n";
                 String strJurchuk = "저축" + "\r\n"+"--------"+"\r\n";
 
-                while (cursor.moveToNext()){
+                while (cursor.moveToNext()){                             // 커서를 사용해서 위치 조정
                     strSuip += cursor.getString(0)+"\r\n";
                     strJichull += cursor.getString(1)+"\r\n";
                     strJurchuk += cursor.getString(2)+"\r\n";
                 }
 
-                edtSuipResult.setText(strSuip);
+                edtSuipResult.setText(strSuip);                          //저장값들 표기
                 edtJichullResult.setText(strJichull);
                 edtJurchukResult.setText(strJurchuk);
 

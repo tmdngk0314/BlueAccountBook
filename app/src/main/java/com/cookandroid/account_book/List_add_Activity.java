@@ -9,15 +9,15 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class List_add_Activity extends AppCompatActivity {
-    private String Tjichul,Tsuip,Tjurchuk,Mjichul,Msuip,Mjurchuk;
-    private Integer Balance1 = 0,Balance2=0,TotalJasan=0;
+public class List_add_Activity extends AppCompatActivity {    //내역 추가
+    private String Tjichul,Tsuip,Tjurchuk,Mjichul,Msuip,Mjurchuk;   //오늘 지출,수입,저축  이번달 지출,수입,저축 변수
+    private Integer Balance1 = 0,Balance2=0,TotalJasan=0;  // 오늘의 잔액, 이번달 잔액, 총자산 변수
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_add_);
-        EditText todayjichul = (EditText)findViewById(R.id.todayjichul);
+        EditText todayjichul = (EditText)findViewById(R.id.todayjichul);      //id를 매칭 시켜준다.
         EditText todaysuip = (EditText)findViewById(R.id.todaysuip);
         EditText todayjurchuk = (EditText)findViewById(R.id.todayjurchuk);
         EditText monthjichul = (EditText)findViewById(R.id.monthjichul);
@@ -41,8 +41,8 @@ public class List_add_Activity extends AppCompatActivity {
                 Msuip = monthsuip.getText().toString();
                 Mjurchuk = monthjurchuk.getText().toString();
 
-                Balance1 = Integer.parseInt(Tsuip)-(Integer.parseInt(Tjichul)+Integer.parseInt(Tjurchuk));
-                Balance2 = Integer.parseInt(Msuip)-(Integer.parseInt(Mjichul)+Integer.parseInt(Mjurchuk));
+                Balance1 = Integer.parseInt(Tsuip)-(Integer.parseInt(Tjichul)+Integer.parseInt(Tjurchuk));  // 오늘의 잔액 = 수입 -(지출+저축)
+                Balance2 = Integer.parseInt(Msuip)-(Integer.parseInt(Mjichul)+Integer.parseInt(Mjurchuk)); // 이번달 잔액 = 수입 - (지출+저축)
 
                 todaybalance.setText(Balance1.toString());
                 monthbalance.setText(Balance2.toString());
@@ -64,7 +64,7 @@ public class List_add_Activity extends AppCompatActivity {
                 Balance2 = Integer.parseInt(Msuip)-(Integer.parseInt(Mjichul)+Integer.parseInt(Mjurchuk));
                 TotalJasan = Balance2 + Integer.parseInt(Mjurchuk);
 
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);   //메인화면에 표시해줄 인텐트들 생성
                 intent.putExtra("ToJichul",Tjichul);
                 intent.putExtra("ToSuip",Tsuip);
                 intent.putExtra("ToJurchuk",Tjurchuk);

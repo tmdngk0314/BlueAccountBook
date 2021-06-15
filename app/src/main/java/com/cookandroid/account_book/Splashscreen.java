@@ -10,7 +10,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
-public class Splashscreen extends Activity {
+public class Splashscreen extends Activity {    // 오픈소스를 활용하였습니다(splashscreen)
     public void onAttachedToWindow() {
         super.onAttachedToWindow();
         Window window = getWindow();
@@ -39,7 +39,7 @@ public class Splashscreen extends Activity {
 
         splashTread = new Thread() {
             @Override
-            public void run() {
+            public void run() {     //쓰레드 활용
                 try {
                     int waited = 0;
                     // Splash screen pause time

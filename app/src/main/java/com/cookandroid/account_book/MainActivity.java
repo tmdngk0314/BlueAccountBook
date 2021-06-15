@@ -13,8 +13,8 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private DatePickerDialog.OnDateSetListener callbackMethod;
-    private Button button_Date1,button_Date2;
+    private DatePickerDialog.OnDateSetListener callbackMethod;  //데이트 피커 객체
+    private Button button_Date1,button_Date2;  // 데이트피커를 사용할 버튼
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
         final int Vaule = inIntent.getIntExtra("Num2",0);
 
-        ImageButton calcbutton = (ImageButton)findViewById(R.id.calcbutton);
+        ImageButton calcbutton = (ImageButton)findViewById(R.id.calcbutton);      //사용할 이미지버튼, 텍스트 뷰들의 객체생성
         ImageButton listbutton = (ImageButton)findViewById(R.id.listbutton);
         ImageButton memobutton = (ImageButton)findViewById(R.id.memobutton);
         ImageButton successbutton = (ImageButton)findViewById(R.id.successbutton);
@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         TextView AllJasan = (TextView)findViewById(R.id.AllJasan);
         TextView AllJur = (TextView)findViewById(R.id.Alljur);
 
-        TJi = inIntent.getStringExtra("ToJichul");
+        TJi = inIntent.getStringExtra("ToJichul");      // 내역추가 부분의 인텐트들을 받아온다
         TS = inIntent.getStringExtra("ToSuip");
         TJur = inIntent.getStringExtra("ToJurchuk");
         MJi = inIntent.getStringExtra("MonJichul");
@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
          MB = inIntent.getStringExtra("BalMonth");
          TotalJ = inIntent.getStringExtra("TotalJasan");
 
-         TodayJichul.setText(TJi+"원");
+         TodayJichul.setText(TJi+"원");                    // 받아온 인텐트들을 객체에 넣고 값을 출력
         TodaySuip.setText(TS+"원");
         TodayJurchuk.setText(TJur+"원");
         TodayBalance.setText(TB+"원");
@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
         AllJur.setText(MJur+"원");
 
 
-        calcbutton.setOnClickListener(new View.OnClickListener() {
+        calcbutton.setOnClickListener(new View.OnClickListener() {            //캘린더 버튼 누를시 CalendarActivity 실행
             @Override
             public void onClick(View view) {
                 Intent intent1 = new Intent(getApplicationContext(), CalendarActivity.class);
@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        listaddbtn.setOnClickListener(new View.OnClickListener() {
+        listaddbtn.setOnClickListener(new View.OnClickListener() {            //내역추가 버튼 누를시 List_add_Activity 실행
             @Override
             public void onClick(View view) {
                 Intent intent11 = new Intent(getApplicationContext(), List_add_Activity.class);
@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        listbutton.setOnClickListener(new View.OnClickListener() {
+        listbutton.setOnClickListener(new View.OnClickListener() {          // 내역 버튼 누를시 ListActivity 실행
             @Override
             public void onClick(View view) {
                 Intent intent2 = new Intent(getApplicationContext(), ListActivity.class);
@@ -95,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        memobutton.setOnClickListener(new View.OnClickListener() {
+        memobutton.setOnClickListener(new View.OnClickListener() {          //메모 버튼 누를시 MemoActivity 실행
             @Override
             public void onClick(View v) {
                 Intent intent3 = new Intent(getApplicationContext(), MemoActivity.class);
@@ -103,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        successbutton.setOnClickListener(new View.OnClickListener() {
+        successbutton.setOnClickListener(new View.OnClickListener() {       //목표지출 버튼 누를 시  SuccessActivity 실행
             @Override
             public void onClick(View v) {
                 Intent intent4 = new Intent(getApplicationContext(), Success.class);
@@ -111,14 +111,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        informationbutton.setOnClickListener(new View.OnClickListener() {
+        informationbutton.setOnClickListener(new View.OnClickListener() {  //도움말 버튼 누를시 MemoActivity 실행
             @Override
             public void onClick(View v) {
                 Intent intent5 = new Intent(getApplicationContext(), Information.class);
                 startActivity(intent5);
             }
         });
-        calculatorbutton.setOnClickListener(new View.OnClickListener() {
+        calculatorbutton.setOnClickListener(new View.OnClickListener() {    //계산기 버튼 누를시 calculaterActivity 실행
             @Override
             public void onClick(View v) {
                 Intent intent6 = new Intent(getApplicationContext(), CalculatorActivity.class);
@@ -128,7 +128,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-    public void InitializeView()
+    public void InitializeView()   //데이트피커 InitializeView
     {
         button_Date1 = (Button) findViewById(R.id.btnDate1);
         button_Date2 = (Button) findViewById(R.id.btnDate2);
